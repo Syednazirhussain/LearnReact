@@ -18,6 +18,12 @@ const Layout = () => {
             <Link to="/ref">Ref</Link>
           </li>
           <li>
+            <Link to="/reducer">Reducer</Link>
+          </li>
+          <li>
+            <Link to="/callback">Callback</Link>
+          </li>
+          <li>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
