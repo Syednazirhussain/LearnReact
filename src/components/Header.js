@@ -120,17 +120,25 @@ const Header = () => {
                                     <li className="active">
                                         <Link to="/">Home</Link>
                                     </li>
-                                    <li><a href="javascript:void(0);">Shop</a></li>
+                                    <li>
+                                        <Link to="/shop">Shop</Link>
+                                    </li>
                                     <li><a href="javascript:void(0);">Pages</a>
                                         <ul className="header__menu__dropdown">
-                                            <li><a href="javascript:void(0);">Shop Details</a></li>
-                                            <li><a href="javascript:void(0);">Shoping Cart</a></li>
-                                            <li><a href="javascript:void(0);">Check Out</a></li>
-                                            <li><a href="javascript:void(0);">Blog Details</a></li>
+                                            <li>
+                                                <Link to="/shop-detail">Shop Detail</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/cart">Shop</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/checkout">Check Out</Link>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li><a href="javascript:void(0);">Blog</a></li>
-                                    <li><a href="javascript:void(0);">Contact</a></li>
+                                    <li>
+                                        <Link to="/contact">Contact</Link>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

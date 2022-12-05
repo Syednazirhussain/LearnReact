@@ -11,13 +11,13 @@ const Dashboard = () => {
   useEffect(() => {
 
     $('.set-bg').each(function () {
-      var bg = $(this).data('setbg');
+      let bg = $(this).data('setbg');
       $(this).css('background-image', 'url(' + bg + ')');
     });
 
     $('.hero__categories__all').on('click', function(){
-      $('.hero__categories ul').slideToggle(400);
-  });
+      $('.hero__categories ul').slideToggle(2000);
+    });
 
   });
 

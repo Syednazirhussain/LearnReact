@@ -4,13 +4,11 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-// import Blogs from "./pages/Blogs";
-import Context from "./pages/Context";
-import Ref from "./pages/Ref";
-import Reducer from "./pages/Reducer";
-import Callback from "./pages/Callback";
-import Effect from "./pages/Effect";
-import Contact from "./pages/Contact";
+import Shop from './pages/Shop';
+import ShopDetail from './pages/ShopDetail';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Contact from './pages/Contact';
 import NoPage from "./pages/NoPage";
 
 function App() {
@@ -19,11 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Dashboard />}>
           <Route index element={<Home />} />
-          <Route path="effects" element={<Effect />} />
-          <Route path="context" element={<Context />} />
-          <Route path="ref" element={<Ref />} />
-          <Route path="reducer" element={<Reducer />} />
-          <Route path="callback" element={<Callback />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="shop-detail" element={<ShopDetail />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<Checkout />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
