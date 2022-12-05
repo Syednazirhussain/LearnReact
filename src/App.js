@@ -1,10 +1,10 @@
 import './App.css';
 
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
+import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
+// import Blogs from "./pages/Blogs";
 import Context from "./pages/Context";
 import Ref from "./pages/Ref";
 import Reducer from "./pages/Reducer";
@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Dashboard />}>
           <Route index element={<Home />} />
           <Route path="effects" element={<Effect />} />
           <Route path="context" element={<Context />} />

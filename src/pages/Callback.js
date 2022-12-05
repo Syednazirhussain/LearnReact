@@ -1,5 +1,6 @@
-import { useState, useCallback } from "react";
-import ReactDOM from "react-dom/client";
+import { useState } from "react";
+// import { useState, useCallback } from "react";
+// import ReactDOM from "react-dom/client";
 import Todoes from "./Todoes";
 
 function Callback() {
@@ -11,13 +12,13 @@ function Callback() {
         setCount((c) => c + 1);
     };
 
-    // const addTodo = () => {
-    //     setTodos((t) => [...t, "New Todo"]);
-    // };
-
-    const addTodo = useCallback(() => {
+    const addTodo = () => {
         setTodos((t) => [...t, "New Todo"]);
-    }, [todos]);
+    };
+
+    // const addTodo = useCallback(() => {
+    //     setTodos((t) => [...t, "New Todo"]);
+    // }, [todos]);
 
     return (
         <>

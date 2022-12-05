@@ -1,11 +1,12 @@
 import { useState, createContext, useContext } from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 
 
 const UserContext = createContext()
 
 function Context() {
-    const [user, setUser] = useState("Jesse Hall");
+    // const [user, setUser] = useState("Jesse Hall");
+    const [user] = useState("Jesse Hall");
     return (
         <UserContext.Provider value={user}>
             <h1>{`Hello ${user}!`}</h1>
