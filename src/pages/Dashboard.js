@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import React, { useEffect } from 'react';
 import { Outlet } from "react-router-dom";
 
@@ -10,14 +10,10 @@ const Dashboard = () => {
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
 
-    $('.set-bg').each(function () {
-      let bg = $(this).data('setbg');
-      $(this).css('background-image', 'url(' + bg + ')');
-    });
-
-    $('.hero__categories__all').on('click', function(){
-      $('.hero__categories ul').slideToggle(2000);
-    });
+    // $('.set-bg').each(function () {
+    //   let bg = $(this).data('setbg');
+    //   $(this).css('background-image', 'url(' + bg + ')');
+    // });
 
   });
 

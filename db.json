@@ -1,0 +1,62 @@
+{
+    "product": [
+        {
+            "id": 0,
+            "name": "Fresh Meat"
+        },
+        {
+            "id": 1,
+            "name": "Fresh Oranges"
+        },
+        {
+            "id": 2,
+            "name": "Dry Furits"
+        }
+    ],
+    "categories": [
+        {
+            "id": 0,
+            "name": "Fresh Meat"
+        },
+        {
+            "id": 1,
+            "name": "Vegetables"
+        },
+        {
+            "id": 2,
+            "name":"Fruit & Nut Gifts"
+        },
+        {
+            "id": 3,
+            "name":"Fresh Berries"
+        },
+        {
+            "id": 4,
+            "name":"Ocean Foods"
+        },
+        {
+            "id": 5,
+            "name":"Butter & Eggs"
+        },
+        {
+            "id": 6,
+            "name":"Fast Foods"
+        },
+        {
+            "id": 7,
+            "name":"Fresh Onion"
+        },
+        {
+            "id": 8,
+            "name":"Papayya & Crips"
+        },
+        {
+            "id": 9,
+            "name":"Oatmeal"
+        },
+        {
+            "id": 10,
+            "name":"Bananas"
+        }
+    ]
+}
