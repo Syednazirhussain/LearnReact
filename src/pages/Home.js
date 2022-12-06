@@ -1,4 +1,26 @@
+import axios from "axios"
+import { useState } from "react";
+
+
 const Home = () => {
+
+    const [x] = useState(5);
+    const [categories, setCategories] = useState([])
+    const [phone, setPhoneNumber] = useState("+65 11.188.888")
+
+
+    const getCategories = async () => {
+
+        let { data } = await axios.get(process.env.REACT_APP_SERVER_BASE_URL+"categories", {
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+        console.log(data)
+        setCategories(data)
+    }
+
+
     return (
         <>
             <section className="hero">
@@ -8,20 +30,14 @@ const Home = () => {
                             <div className="hero__categories">
                                 <div className="hero__categories__all">
                                     <i className="fa fa-bars"></i>
-                                    <span>All departments</span>
+                                    <span>{(x) < 10 ? "Departments" : "All departments"}</span>
                                 </div>
                                 <ul>
-                                    <li><a href="javascript:void(0);">Fresh Meat</a></li>
-                                    <li><a href="javascript:void(0);">Vegetables</a></li>
-                                    <li><a href="javascript:void(0);">Fruit & Nut Gifts</a></li>
-                                    <li><a href="javascript:void(0);">Fresh Berries</a></li>
-                                    <li><a href="javascript:void(0);">Ocean Foods</a></li>
-                                    <li><a href="javascript:void(0);">Butter & Eggs</a></li>
-                                    <li><a href="javascript:void(0);">Fastfood</a></li>
-                                    <li><a href="javascript:void(0);">Fresh Onion</a></li>
-                                    <li><a href="javascript:void(0);">Papayaya & Crisps</a></li>
-                                    <li><a href="javascript:void(0);">Oatmeal</a></li>
-                                    <li><a href="javascript:void(0);">Fresh Bananas</a></li>
+                                    { 
+                                        categories.map((category) => {
+                                            return <li key={category.id}><a href="javascript:void(0);">{category.name}</a></li>
+                                        })
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -42,7 +58,7 @@ const Home = () => {
                                         <i className="fa fa-phone"></i>
                                     </div>
                                     <div className="hero__search__phone__text">
-                                        <h5>+65 11.188.888</h5>
+                                        <h5>{phone}</h5>
                                         <span>support 24/7 time</span>
                                     </div>
                                 </div>
@@ -52,7 +68,7 @@ const Home = () => {
                                     <span>FRUIT FRESH</span>
                                     <h2>Vegetable <br />100% Organic</h2>
                                     <p>Free Pickup and Delivery Available</p>
-                                    <a href="javascript:void(0);" className="primary-btn">SHOP NOW</a>
+                                    <a href="javascript:void(0);" onClick={getCategories} className="primary-btn">SHOP NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -518,4 +534,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Home

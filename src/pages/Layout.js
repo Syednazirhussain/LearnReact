@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Dashboard = () => {
+const Layout = () => {
 
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
@@ -19,11 +19,11 @@ const Dashboard = () => {
 
   return (
     <>
-      <Header />
+      <Header page="Home"/>
       <Outlet />
       <Footer />
     </>
   )
 };
 
-export default Dashboard;
+export default Layout;

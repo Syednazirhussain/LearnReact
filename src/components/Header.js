@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ page }) => {
     return (
         <>
             <div id="preloder">
@@ -38,7 +38,7 @@ const Header = () => {
                 <nav className="humberger__menu__nav mobile-menu">
                     <ul>
                         <li className="active">
-                            <Link to="/">Home</Link>
+                            <Link to="/">{page}</Link>
                         </li>
                         <li><a href="javascript:void(0);">Shop</a></li>
                         <li><a href="javascript:void(0);">Pages</a>
@@ -118,7 +118,7 @@ const Header = () => {
                             <nav className="header__menu">
                                 <ul>
                                     <li className="active">
-                                        <Link to="/">Home</Link>
+                                        <Link to="/">{page}</Link>
                                     </li>
                                     <li>
                                         <Link to="/shop">Shop</Link>
