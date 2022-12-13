@@ -8,6 +8,9 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Contact from './pages/Contact';
 import NoPage from "./pages/NoPage";
+import Effect from "./pages/Effect"
+import Context from "./pages/Context"
+import Ref from "./pages/Ref"
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="effects" element={<Effect />} />
+          <Route path="contexts" element={<Context />} />
+          <Route path="refs" element={<Ref />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

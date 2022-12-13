@@ -1,14 +1,13 @@
 import axios from "axios"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const Home = () => {
 
-    const [x] = useState(5);
     const [categories, setCategories] = useState([])
     const [phone, setPhoneNumber] = useState("+65 11.188.888")
 
-
+    /*
     const getCategories = async () => {
 
         let { data } = await axios.get(process.env.REACT_APP_SERVER_BASE_URL+"categories", {
@@ -19,6 +18,11 @@ const Home = () => {
         console.log(data)
         setCategories(data)
     }
+    */
+
+    useEffect(() => {
+        console.log("State");
+    }, [])
 
 
     return (
@@ -30,7 +34,7 @@ const Home = () => {
                             <div className="hero__categories">
                                 <div className="hero__categories__all">
                                     <i className="fa fa-bars"></i>
-                                    <span>{(x) < 10 ? "Departments" : "All departments"}</span>
+                                    <span>All departments</span>
                                 </div>
                                 <ul>
                                     { 
@@ -68,7 +72,7 @@ const Home = () => {
                                     <span>FRUIT FRESH</span>
                                     <h2>Vegetable <br />100% Organic</h2>
                                     <p>Free Pickup and Delivery Available</p>
-                                    <a href="javascript:void(0);" onClick={getCategories} className="primary-btn">SHOP NOW</a>
+                                    <a href="javascript:void(0);" className="primary-btn">SHOP NOW</a>
                                 </div>
                             </div>
                         </div>

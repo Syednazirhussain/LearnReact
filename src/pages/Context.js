@@ -6,12 +6,21 @@ const UserContext = createContext()
 
 function Context() {
     // const [user, setUser] = useState("Jesse Hall");
-    const [user] = useState("Jesse Hall");
+    const [user] = useState("Syed Nazir Hussain");
     return (
-        <UserContext.Provider value={user}>
-            <h1>{`Hello ${user}!`}</h1>
-            <Component2 user={user} />
-        </UserContext.Provider>
+        <>
+            <div className="container">
+                <div className="card">
+                    <div className="card-body">
+                        <UserContext.Provider value={user}>
+                            <h1>{`Hello ${user}!`}</h1>
+                            {/* <Component2 user={user} /> */}
+                            <Component5 />
+                        </UserContext.Provider>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
 

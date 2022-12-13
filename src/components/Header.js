@@ -134,6 +134,16 @@ const Header = ({ page }) => {
                                             <li>
                                                 <Link to="/checkout">Check Out</Link>
                                             </li>
+                                            <li>
+                                                <Link to="/effects">Effects</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/contexts">Contexts</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/refs">Refs</Link>
+                                            </li>
+                                            
                                         </ul>
                                     </li>
                                     <li>
