@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Link } from "react-router-dom";
 
 import logo from 'admin-lte/dist/img/AdminLTELogo.png'
 import user_profile from 'admin-lte/dist/img/user2-160x160.jpg'
@@ -7,10 +8,10 @@ const Sidebar = () => {
     return (
         <>
             <aside className="main-sidebar sidebar-dark-primary elevation-4">
-                <a href="#" className="brand-link">
+                <Link to="/" className="brand-link">
                     <img src={logo} alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: .8}} />
                         <span className="brand-text font-weight-light">AdminLTE 3</span>
-                </a>
+                </Link>
                 <div className="sidebar">
                     <div className="user-panel mt-3 pb-3 mb-3 d-flex">
                         <div className="image">
@@ -61,13 +62,13 @@ const Sidebar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">
+                                <Link to="/books" className="nav-link">                                    
                                     <i className="nav-icon fas fa-th"></i>
                                     <p>
-                                        Widgets
+                                        Books
                                         <span className="right badge badge-danger">New</span>
                                     </p>
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a href="#" className="nav-link">
