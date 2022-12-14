@@ -1,35 +1,16 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/effects">Fffects</Link>
-          </li>
-          <li>
-            <Link to="/context">Context</Link>
-          </li>
-          <li>
-            <Link to="/ref">Ref</Link>
-          </li>
-          <li>
-            <Link to="/reducer">Reducer</Link>
-          </li>
-          <li>
-            <Link to="/callback">Callback</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-
+      <Header/>
+      <Sidebar/>
       <Outlet />
+      <Footer />
     </>
   )
 };
