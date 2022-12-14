@@ -1,5 +1,4 @@
 import { useState, createContext, useContext } from "react";
-import ReactDOM from "react-dom/client";
 
 
 const UserContext = createContext()
@@ -9,6 +8,7 @@ function Context() {
     return (
         <UserContext.Provider value={user}>
             <h1>{`Hello ${user}!`}</h1>
+            <button type="button" onClick={ () => { setUser("Nazir") }}></button>
             <Component2 user={user} />
         </UserContext.Provider>
     );

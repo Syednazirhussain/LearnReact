@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import ReactDOM from "react-dom/client";
 import Todoes from "./Todoes";
 
 function Callback() {
@@ -17,7 +16,7 @@ function Callback() {
 
     const addTodo = useCallback(() => {
         setTodos((t) => [...t, "New Todo"]);
-    }, [todos]);
+    }, []);
 
     return (
         <>

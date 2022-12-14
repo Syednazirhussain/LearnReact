@@ -38,6 +38,9 @@ const Home = () => {
             <p>
                 It is a {car.color} {car.model} from {car.year}.
             </p>
+            <br/>
+            <button type="button" onClick={ () => { setTodos([...todos, `todo ${todos.length+1}`]) }}>Add Todos</button>
+            <br/>
             <hr/>
             <h1>My favorite color is {color}!</h1>
             <button
