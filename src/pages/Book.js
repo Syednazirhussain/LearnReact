@@ -1,4 +1,33 @@
+import { useEffect, useState } from "react";
+import axios from 'axios'
+
+
 const Book = () => {
+
+    const [books, updateBooks] = useState([]) 
+
+    const fetchBooks = async () => {
+
+        let url = process.env.REACT_BASE_URL+"/posts"
+
+        console.log(url);
+
+        await axios.get(url, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+
+    useEffect(() => {
+        fetchBooks()
+    }, [])
+
+
     return (
         <>
             <div className="row">

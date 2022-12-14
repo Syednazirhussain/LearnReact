@@ -32,7 +32,17 @@ const Sidebar = () => {
                         </div>
                     </div>
                     <nav className="mt-2">
-                        <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">                            <li className="nav-item menu-open">
+                        <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">                            
+                            <li className="nav-item">
+                                <Link to="/books" className="nav-link">                                    
+                                    <i className="nav-icon fas fa-th"></i>
+                                    <p>
+                                        Books
+                                        <span className="right badge badge-danger">New</span>
+                                    </p>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <a href="#" className="nav-link active">
                                     <i className="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
@@ -60,15 +70,6 @@ const Sidebar = () => {
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/books" className="nav-link">                                    
-                                    <i className="nav-icon fas fa-th"></i>
-                                    <p>
-                                        Books
-                                        <span className="right badge badge-danger">New</span>
-                                    </p>
-                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a href="#" className="nav-link">
