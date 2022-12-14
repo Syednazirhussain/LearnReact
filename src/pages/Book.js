@@ -4,20 +4,23 @@ import axios from 'axios'
 
 const Book = () => {
 
-    const [books, updateBooks] = useState([]) 
+    const [books, setBooks] = useState([]) 
 
     const fetchBooks = async () => {
 
-        let url = process.env.REACT_BASE_URL+"/posts"
-
-        console.log(url);
+        let url = process.env.REACT_APP_BASE_URL+"/books"
 
         await axios.get(url, {
             headers: {
                 'Accept': 'application/json'
             }
         }).then((response) => {
-            console.log(response);
+
+            if (response.status == 200) {
+
+                console.log(response.data);
+                setBooks(response.data);
+            }
         }).catch((error) => {
             console.log(error);
         })
@@ -25,6 +28,8 @@ const Book = () => {
 
     useEffect(() => {
         fetchBooks()
+
+        console.log(books);
     }, [])
 
 
@@ -40,53 +45,23 @@ const Book = () => {
                             <table className="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th style={{ width: '10px' }}>#</th>
-                                        <th>Task</th>
-                                        <th>Progress</th>
-                                        <th style={{ width: '40px' }}>Label</th>
+                                        <th>ID</th>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                        <th>Created_At</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>Update software</td>
-                                        <td>
-                                            <div className="progress progress-xs">
-                                                <div className="progress-bar progress-bar-danger" style={{ width: '55%' }}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-danger">55%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>Clean database</td>
-                                        <td>
-                                            <div className="progress progress-xs">
-                                                <div className="progress-bar bg-warning" style={{width: '70%'}}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-warning">70%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>Cron job running</td>
-                                        <td>
-                                            <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-primary" style={{ width: '30%' }}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-primary">30%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>Fix and squish bugs</td>
-                                        <td>
-                                            <div className="progress progress-xs progress-striped active">
-                                                <div className="progress-bar bg-success" style={{ width: '90%' }}></div>
-                                            </div>
-                                        </td>
-                                        <td><span className="badge bg-success">90%</span></td>
-                                    </tr>
+                                    {
+                                        books.map((book) => {
+                                            <tr key={book.id}>
+                                                <td>{book.id}</td>
+                                                <td>{book.title}</td>
+                                                <td>{book.price}</td>
+                                                <td>{book.created_at}</td>
+                                            </tr>
+                                        })
+                                    }
                                 </tbody>
                             </table>
                         </div>

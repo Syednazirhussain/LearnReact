@@ -1,4 +1,42 @@
 {
+    "books": [
+        {
+            "id": 1,
+            "title": "Introduction to C++",
+            "author": {
+                "id": 1,
+                "name": "Syed Nazir",
+                "email": "syednazir13@gmail.com",
+                "created_at": "2022-08-31"
+            },
+            "price": 180,
+            "created_at": "2012-11-23"
+        },
+        {
+            "id": 2,
+            "title": "Data Structure & Algorithms",
+            "author": {
+                "id": 1,
+                "name": "Syed Nazir",
+                "email": "syednazir13@gmail.com",
+                "created_at": "2022-08-31"
+            },
+            "price": 530,
+            "created_at": "2012-11-21"
+        },
+        {
+            "id": 1,
+            "title": "Theory of Autometa",
+            "author": {
+                "id": 1,
+                "name": "Syed Nazir",
+                "email": "syednazir13@gmail.com",
+                "created_at": "2022-08-31"
+            },
+            "price": 330,
+            "created_at": "2012-11-12"
+        }
+    ],
     "posts": [
         {
             "id": 1,
