@@ -39,7 +39,7 @@ const Book = () => {
                 <div className="col-md-12">
                     <div className="card">
                         <div className="card-header">
-                            <h3 className="card-title">Bordered Table</h3>
+                            <h3 className="card-title">Books&nbsp;({books.length})</h3>
                         </div>
                         <div className="card-body">
                             <table className="table table-bordered">
@@ -52,15 +52,15 @@ const Book = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {
-                                        books.map((book) => {
+                                    { 
+                                        books.map(book => (
                                             <tr key={book.id}>
                                                 <td>{book.id}</td>
                                                 <td>{book.title}</td>
                                                 <td>{book.price}</td>
                                                 <td>{book.created_at}</td>
                                             </tr>
-                                        })
+                                        ))
                                     }
                                 </tbody>
                             </table>
